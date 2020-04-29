@@ -5,9 +5,9 @@ if number > 0:
     lnumber = number % 10
 elif number <= 0:
     lnumber = number % -10
-if lnumber > 5:
-    print('Last digit of {:d} is {:d} and is greater than 5'.format(number, lnumber))
-elif lnumber == 0:
+if lnumber == 0:
     print("Last digit of {:d} is {} and is ".format(number, lnumber))
+elif lnumber > 5:
+    print('Last digit of {:d} is {:d} and is greater than 5'.format(number, lnumber))
 else:
     print("Last digit of {:d} is {:d} less than 6 and not 0".format(number, lnumber))
