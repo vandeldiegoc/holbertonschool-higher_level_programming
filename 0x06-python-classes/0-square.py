@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-    """An empty block"""
+"""An empty block"""
     
 
 class Square:
