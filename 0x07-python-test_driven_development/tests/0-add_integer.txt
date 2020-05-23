@@ -1,0 +1,46 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+------------------------------------------------------------
+=========================== TEST============================
+------------------------------------------------------------
+
+# test_1 int add int
+>>> add_integer(7, 5)
+12
+
+# test_2 float add int
+>>> add_integer(7.5, 5)
+12.5
+
+# test_3 negative add int
+>>> add_integer(-3, 5)
+2
+
+# test_4 int add int
+>>> add_integer(-7, 1)
+-6
+
+>>> add_integer(7j, 2)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(7, 2j)
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+>>> add_integer(7j, 2)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(0, None)
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
