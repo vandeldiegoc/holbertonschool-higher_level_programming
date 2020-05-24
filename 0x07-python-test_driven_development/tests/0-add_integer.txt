@@ -22,8 +22,8 @@
 -6
 
 # test_5 int add int
->>> add_integer(5, 5)
-10
+>>> add_integer(5.5, 5)
+10.5
 
 >>> add_integer(7j, 2)
 Traceback (most recent call last):
