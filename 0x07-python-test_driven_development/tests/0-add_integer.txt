@@ -8,6 +8,10 @@
 >>> add_integer(7, 5)
 12
 
+# test_1 int add int
+>>> add_integer(5, 7)
+12
+
 # test_3 negative add int
 >>> add_integer(-3, 5)
 2
