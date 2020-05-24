@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """
-print matrix
+fution  matrix
 """
 
 
 def matrix_divided(matrix, div):
+    """method that divide matrix by a number"""
     error1 = "matrix must be a matrix (list of lists) of integers/floats"
     error2 = "matrix must be a matrix (list of lists) of integers/floats"
     new_matrix = []
