@@ -8,9 +8,9 @@
 >>> add_integer(7, 5)
 12
 
-# test_2 int add float
+# test_2 float add int
 >>> add_integer(7.5, 5)
-12
+12.5
 
 # test_3 negative add int
 >>> add_integer(-3, 5)
@@ -44,6 +44,4 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 	...
 TypeError: b must be an integer
-
-
 
