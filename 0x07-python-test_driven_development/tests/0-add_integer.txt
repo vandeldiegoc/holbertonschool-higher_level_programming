@@ -16,6 +16,11 @@
 >>> add_integer(5.0, 7.0)
 12
 
+
+# test_3 int add int
+>>> add_integer(7.0, 5.0)
+12.5
+
 # test_3 negative add int
 >>> add_integer(-3, 5)
 2
