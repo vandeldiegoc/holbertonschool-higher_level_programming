@@ -5,8 +5,7 @@ print square
 
 
 def print_square(size):
-    if not (isinstance(size, float)) and size < 0:
-        raise TypeError("size must be an integer")
+    "module that print square"""
     if not (isinstance(size, int)):
         raise TypeError("size must be an integer")
     if size < 0:
