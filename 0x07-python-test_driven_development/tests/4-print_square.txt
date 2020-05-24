@@ -18,7 +18,6 @@ ValueError: size must be >= 0
 
 # test_3 square 0
 >>> print_square(0)
-<BLANKLINE>
 
 # test_4 square None
 >>> print_square(None)
