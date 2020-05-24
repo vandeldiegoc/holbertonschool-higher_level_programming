@@ -42,7 +42,7 @@ Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 # test_9 matrix int div by float result 0
->>> matrix_divided([[0, 0, 0],[0, 0, 0]], 2.5)
+>>> matrix_divided([[3, 5, 0],[0, 0, 0]], float("inf"))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
 
