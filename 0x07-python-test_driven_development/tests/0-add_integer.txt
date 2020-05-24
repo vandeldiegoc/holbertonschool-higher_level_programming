@@ -10,8 +10,8 @@
 
 
 # test_2 float add int
->>> add_integer(7.0, 5)
-12
+>>> add_integer(7.5, 5)
+12.5
 
 # test_3 negative add int
 >>> add_integer(-3, 5)
