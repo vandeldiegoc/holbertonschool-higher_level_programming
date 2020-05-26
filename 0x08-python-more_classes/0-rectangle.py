@@ -4,6 +4,4 @@
 
 class Rectangle:
     """class rectangle"""
-
-    def bar(self):
         pass
