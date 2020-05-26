@@ -11,17 +11,17 @@ class Rectangle:
 
     @property
     def width(self):
-        """ width getter method"""
+        """width getter method"""
         return self.__width
 
     @property
     def height(self):
-        """ height getter method"""
+        """height getter method"""
         return self.__height
 
     @width.setter
     def width(self, value):
-        """ width setter method"""
+        """width setter method"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
