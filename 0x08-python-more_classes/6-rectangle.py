@@ -72,4 +72,3 @@ class Rectangle:
         '''del'''
         print("Bye rectangle...")
         type(self).number_of_instances -= 1
-
