@@ -31,6 +31,3 @@ class Rectangle:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__width = value
-
-    def void(self):
-        pass
