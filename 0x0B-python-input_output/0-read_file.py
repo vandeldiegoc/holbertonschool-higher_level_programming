@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     """funtion"""
-    with open(filename, encoding="utf-8") as reedf:
-        print(reedf.read())
+    with open(filename, 'r' encoding="utf-8") as reedf:
+        print(reedf.read(), end"")
