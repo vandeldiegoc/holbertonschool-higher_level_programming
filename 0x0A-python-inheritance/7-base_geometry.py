@@ -3,8 +3,6 @@
 
 
 class BaseGeometry:
-    """class empty"""
-    pass
 
     def area(self):
         """raise Exception"""
