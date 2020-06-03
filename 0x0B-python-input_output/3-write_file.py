@@ -1,4 +1,7 @@
 #!usr/bin/python3
 
+
 def write_file(filename="", text=""):
-    with open(filename, mode'w')
+    with open(filename, mode='w', encoding="utf-8") as filew:
+        j = filew.write(text)
+        return j
