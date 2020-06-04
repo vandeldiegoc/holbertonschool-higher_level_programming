@@ -5,7 +5,6 @@
 class Student:
     """new class"""
 
-
     def __init__(self, first_name, last_name, age):
         """contructor"""
         self.first_name = first_name
