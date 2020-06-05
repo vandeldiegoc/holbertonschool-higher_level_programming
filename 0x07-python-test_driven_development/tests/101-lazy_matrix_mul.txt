@@ -1,0 +1,41 @@
+
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+
+# text_0 
+>>> lazy_matrix_mul([[1, 5], [3, 4]], [['m', 8], [3, 3]])
+Traceback (most recent call last):
+        ...
+TypeError: invalid data type for einsum
+
+#text_1
+>>> lazy_matrix_mul('hello')
+Traceback (most recent call last):    
+	...
+TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+# text_2 
+>>> lazy_matrix_mul([[4, 7], [4, 5]], [[3], [4, 3]])
+Traceback (most recent call last): 
+    ...
+ValueError: setting an array element with a sequence.
+
+# text_3 
+>>> lazy_matrix_mul([[4, 7], [4, 5]], [[], [4, 3]])
+Traceback (most recent call last): 
+    ...
+ValueError: setting an array element with a sequence.
+
+
+# text_4
+>>> lazy_matrix_mul([[4, 7], [4, 5]], 'hello')
+Traceback (most recent call last): 
+    ...
+ValueError: Scalar operands are not allowed, use '*' instead
+
+
+# text_5
+>>> lazy_matrix_mul([[1, 2]], [])
+Traceback (most recent call last): 
+	...
+ValueError: shapes (1,2) and (0,) not aligned: 2 (dim 1) != 0 (dim 0)
