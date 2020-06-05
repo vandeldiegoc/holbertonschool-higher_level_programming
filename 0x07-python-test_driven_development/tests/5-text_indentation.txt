@@ -4,3 +4,23 @@
 =========================== TEST============================
 ------------------------------------------------------------
 
+# text_0 int
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+
+#text_1 None
+>>> text_indentation(None)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+ # case3 
+>>> text_indentation('      string.       space ?   ')
+      string.
+<BLANKLINE>
+      space ?
+<BLANKLINE>
+<BLANKLINE>

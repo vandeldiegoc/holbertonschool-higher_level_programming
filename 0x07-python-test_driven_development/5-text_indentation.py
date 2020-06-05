@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""module"""
+
+
 def text_indentation(text):
+    """module indentation"""
+    if not isinstance(text, str):
+        raise TypeError('text must be a string')
+
     string = ""
     list_s = ['.', '?', ':']
     x = 0
