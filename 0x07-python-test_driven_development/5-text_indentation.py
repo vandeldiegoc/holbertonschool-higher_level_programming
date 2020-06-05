@@ -2,10 +2,13 @@
 def text_indentation(text):
     string = ""
     list_s = ['.', '?', ':']
-    for x in range(len(text)):
+    x = 0
+    while x != (len(text)):
         if text[x] in list_s:
-            print(text[x])
-        elif text[x - 1] in list_s:
-            print()
-        else:
-            print(text[x], en<F12>d='')
+            string += text[x]
+            string += "\n\n"
+            x += 2
+            continue
+        string += text[x]
+        x += 1
+    print(string, end="")
