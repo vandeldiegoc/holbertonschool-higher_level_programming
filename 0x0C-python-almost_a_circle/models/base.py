@@ -3,6 +3,7 @@
 
 import json
 
+
 class Base:
     """this is the class"""
 
@@ -14,7 +15,6 @@ class Base:
         if self.id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -48,7 +48,7 @@ class Base:
         """crete a new object"""
         if cls.__name__ == "Rectangle":
             from models.rectangle import Rectangle
-            new = Rectangle(1,1)
+            new = Rectangle(1, 1)
         if cls.__name__ == "Square":
             from models.square import Square
             new = Square(1)
@@ -68,4 +68,3 @@ class Base:
             return new_list
         except:
             return new_list
-        

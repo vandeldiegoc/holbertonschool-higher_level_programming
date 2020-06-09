@@ -2,6 +2,7 @@
 """rectangle"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """class inherits"""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -68,24 +69,22 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-
     def area(self):
         """return area"""
         return (self.__width * self.__height)
-    
-
 
     def display(self):
         """print display"""
         for y in range(self.__height):
             for x in range(self.__width):
-                print ('#', end="")
+                print('#', end="")
             print()
 
     def __str__(self):
         '''print str'''
         return "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
-        self.id, self.__x, self.__y,self.__width, self.__height)
+                                                self.id, self.__x, self.__y,
+                                                self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         '''update value'''
@@ -120,4 +119,3 @@ class Rectangle(Base):
         dictionary['x'] = self.x
         dictionary['y'] = self.y
         return dictionary
-

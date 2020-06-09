@@ -2,6 +2,7 @@
 """new class inherits"""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """class rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
@@ -12,11 +13,11 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.size = size
 
-
     def __str__(self):
         """print str"""
         return "[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
-        self.id, self.x, self.y, self.width)
+                                             self.id, self.x, self.y,
+                                             self.width)
 
     @property
     def size(self):
@@ -59,5 +60,3 @@ class Square(Rectangle):
         dictionary['x'] = self.x
         dictionary['y'] = self.y
         return dictionary
-
-
