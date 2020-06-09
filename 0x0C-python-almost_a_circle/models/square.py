@@ -55,8 +55,7 @@ class Square(Rectangle):
         """rectangle dicionary"""
         dictionary = {}
         dictionary['id'] = self.id
-        dictionary['width'] = self.width
-        dictionary['height'] = self.height
         dictionary['x'] = self.x
+        dictionary['size'] = self.size
         dictionary['y'] = self.y
         return dictionary
