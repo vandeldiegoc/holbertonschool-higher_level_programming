@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""class test"""
 
 import unittest
 from models.base import Base
@@ -37,21 +38,19 @@ class Test_Base(unittest.TestCase):
         self.assertEqual(base.id, 0)
 
     def test_json_to_string_1(self):
+        """test  json to string"""
         dictionary = [{'id': 1, 'width': 10, 'height': 7, 'x': 2, 'y': 8}]
         dictionary_1 = '[{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}]'
         self.assertEqual(Base.to_json_string(dictionary), dictionary_1)
 
     def test_json_to_string_2(self):
+        """test void to string"""
         dictionary = []
         dictionary_1 = '[]'
         self.assertEqual(Base.to_json_string(dictionary), dictionary_1)
 
     def test_json_to_string_3(self):
-        dictionar = [{'id': 1, 'width': '10', 'height': 7, 'x': 2, 'y': 8}]
-        dictionar_1 = '[{"id": 1, "width": "10", "height": 7, "x": 2, "y": 8}]'
-        self.assertEqual(Base.to_json_string(dictionar), dictionar_1)
-
-    def test_json_to_string_3(self):
+        """test type of json to string"""
         dictionary = [{'id': 1, 'width': '10',
                        'height': 7, 'x': 2, 'y': 8}]
         self.assertEqual(type(Base.to_json_string(dictionary)), str)
