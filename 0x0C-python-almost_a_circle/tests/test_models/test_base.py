@@ -91,3 +91,6 @@ class Test_Base(unittest.TestCase):
         r2 = Rectangle.create(**r1_dictionary)
         self.assertEqual((r1 is r2), False)
         self.assertEqual((r1 == r2), False)
+
+if __name__ == "__main__":
+    unittest.main()

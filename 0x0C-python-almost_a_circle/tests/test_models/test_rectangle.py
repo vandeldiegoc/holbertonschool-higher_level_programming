@@ -96,3 +96,6 @@ class Test_Rectangle(unittest.TestCase):
         """test update"""
         r1 = Rectangle(10, 10, 10, 10)
         self.assertEqual(str(r1), "[Rectangle] (15) 10/10 - 10/10")
+
+if __name__ == '__main__':
+    unittest.main()

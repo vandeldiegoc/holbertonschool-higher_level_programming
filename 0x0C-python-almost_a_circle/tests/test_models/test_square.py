@@ -39,3 +39,6 @@ class Test_Square(unittest.TestCase):
         """test update"""
         s = Square(10, 10, 10, 10)
         self.assertEqual(str(s), "[Square] (10) 10/10 - 10")
+
+if __name__ == '__main__':
+    unittest.main()
