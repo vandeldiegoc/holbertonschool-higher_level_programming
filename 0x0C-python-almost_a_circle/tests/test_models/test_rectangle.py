@@ -1,61 +1,102 @@
-"""
-Test cases for Rectangle class.
-"""
+"""class test"""
 
-import unittest
+import sys
 import os
-import json
+import io
+import contextlib
+import unittest
 import pep8
-from models.base import Base
+
 from models.rectangle import Rectangle
-from models.square import Square
+from models.base import Base
 
 
-class TestRectangleClass(unittest.TestCase):
-    """A test class created to run tests for Rectangle class"""
+class Test_Rectangle(unittest.TestCase):
+    """test rectangle"""
 
-    def setUp(self):
-        """ testing objects"""
-        Base._Base__nb_objects = 0
-
-    def test_2_rec_inherit(self):
-        '''Test if rectangle inherits from Base'''
-        self.assertEqual(issubclass(Rectangle, Base), True)
-
-    def test_pep8_model(self):
-        """Tests for pep8"""
+    def test_pep8_conformance(self):
+        """Test that we conform to PEP8."""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/rectangle.py'])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
 
-    def test_pep8_test(self):
-        """Tests for pep8"""
-        pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['tests/test_models/test_rectangle.py'])
-        self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+    def test_id_1(self):
+        """test id in rectangle"""
+        rectangl = Rectangle(3, 4)
+        rectangl_1 = Rectangle(10, 2, 0, 0, 12)
+        self.assertEqual(rectangl.id, 6)
+        self.assertEqual(rectangl_1.id, 12)
 
-    def test_documentation(self):
-        """Test to see if documentation is created and correct"""
-        self.assertTrue(hasattr(Rectangle, "__init__"))
-        self.assertTrue(Rectangle.__init__.__doc__)
-        self.assertTrue(hasattr(Rectangle, "width"))
-        self.assertTrue(Rectangle.width.__doc__)
-        self.assertTrue(hasattr(Rectangle, "height"))
-        self.assertTrue(Rectangle.height.__doc__)
-        self.assertTrue(hasattr(Rectangle, "x"))
-        self.assertTrue(Rectangle.x.__doc__)
-        self.assertTrue(hasattr(Rectangle, "y"))
-        self.assertTrue(Rectangle.y.__doc__)
-        self.assertTrue(hasattr(Rectangle, "area"))
-        self.assertTrue(Rectangle.area.__doc__)
-        self.assertTrue(hasattr(Rectangle, "display"))
-        self.assertTrue(Rectangle.display.__doc__)
-        self.assertTrue(hasattr(Rectangle, "__str__"))
-        self.assertTrue(Rectangle.__str__.__doc__)
-        self.assertTrue(hasattr(Rectangle, "update"))
-        self.assertTrue(Rectangle.update.__doc__)
-        self.assertTrue(hasattr(Rectangle, "to_dictionary"))
-        self.assertTrue(Rectangle.to_dictionary.__doc__)
+    def test_atribute_width_1(self):
+        """test width"""
+        w = Rectangle(1, 4)
+        self.assertEqual(w.width, 1)
 
+    def test_atribute_width_2(self):
+        """test width"""
+        with self.assertRaises(ValueError):
+            Rectangle(-1, 4)
+
+    def test_atribute_width_3(self):
+        """test width"""
+        with self.assertRaises(TypeError):
+            Rectangle("-1", 4)
+
+    def test_atribute_height_1(self):
+        """test height"""
+        h = Rectangle(1, 4)
+        self.assertEqual(h.height, 4)
+
+    def test_atribute_height_2(self):
+        """test width"""
+        with self.assertRaises(ValueError):
+            Rectangle(1, -4)
+
+    def test_atribute_height_3(self):
+        """test width"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, "-4")
+
+    def test_atribute_x_1(self):
+        """test width"""
+        x1 = Rectangle(1, 4, 3)
+        self.assertEqual(x1.x, 3)
+
+    def test_atribute_x_2(self):
+        """test width"""
+        with self.assertRaises(ValueError):
+            Rectangle(10, 2, -3)
+
+    def test_atribute_x_2(self):
+        """test width"""
+        with self.assertRaises(TypeError):
+            Rectangle(10, 2, ['1', '2'])
+
+    def test_atribute_y_1(self):
+        """test width"""
+        y1 = Rectangle(1, 4, 3, 2)
+        self.assertEqual(y1.y, 2)
+
+    def test_atribute_y_2(self):
+        """test width"""
+        with self.assertRaises(ValueError):
+            Rectangle(10, 2, -3, -2)
+
+    def test_atribute_y_2(self):
+        """test width"""
+        with self.assertRaises(TypeError):
+            Rectangle(10, 2, 3, ('1', '2'))
+
+    def test_area_1(self):
+        """test area"""
+        r = Rectangle(5, 5)
+        self.assertEqual(r.area(), 25)
+
+    def test_update_1(self):
+        """test update"""
+        r1 = Rectangle(10, 10, 10, 10)
+        self.assertEqual(str(r1), "[Rectangle] (7) 10/10 - 10/10")
+
+if __name__ == '__main__':
+    unittest.main()
