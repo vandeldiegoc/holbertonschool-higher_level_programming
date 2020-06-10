@@ -9,7 +9,6 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-
 class Test_Base(unittest.TestCase):
     """test base module"""
 
