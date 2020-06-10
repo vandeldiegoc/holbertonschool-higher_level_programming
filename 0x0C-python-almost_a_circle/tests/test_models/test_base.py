@@ -2,12 +2,12 @@
 """class test"""
 
 import unittest
+import os
+import json
+
 from models.base import Base
 from models.rectangle import Rectangle
-import json
-import pep8
-import os, sys
-import subprocess
+from models.square import Square
 
 
 

@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 """class test"""
 
+import sys
+import os
+import io
+import contextlib
 import unittest
-from models.base import Base
+
 from models.rectangle import Rectangle
-import json
-import pep8
+from models.base import Base
 
 
 class Test_Rectangle(unittest.TestCase):

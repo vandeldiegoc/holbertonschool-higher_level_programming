@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """class test"""
 
+import sys
+import os
 import unittest
-from models.base import Base
-from models.rectangle import Rectangle
+import io
+import contextlib
 from models.square import Square
-import pep8
-import os, sys
-import subprocess
+from models.rectangle import Rectangle
+from models.base import Base
 
 
 
