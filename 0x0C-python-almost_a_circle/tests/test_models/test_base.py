@@ -6,6 +6,9 @@ from models.base import Base
 from models.rectangle import Rectangle
 import json
 import pep8
+import os, sys
+import subprocess
+
 
 
 class Test_Base(unittest.TestCase):
