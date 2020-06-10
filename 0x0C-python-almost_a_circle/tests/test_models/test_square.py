@@ -4,6 +4,7 @@ import sys
 import os
 import unittest
 import io
+import pep8
 import contextlib
 from models.square import Square
 from models.rectangle import Rectangle

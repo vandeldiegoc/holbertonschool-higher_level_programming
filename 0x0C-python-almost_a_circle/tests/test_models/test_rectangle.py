@@ -5,6 +5,7 @@ import os
 import io
 import contextlib
 import unittest
+import pep8
 
 from models.rectangle import Rectangle
 from models.base import Base
