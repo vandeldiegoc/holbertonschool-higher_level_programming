@@ -9,7 +9,7 @@ if __name__ == '__main__':
     passwd = argv[2]
     db = argv[3]
 
-    conn = MSQLdb.connect(host="localhost", port=3306, user=user,
+    conn = MySQLdb.connect(host="localhost", port=3306, user=user,
                           passwd=passwd, db=db, charset="utf8")
 
     cur = conn.cursor()
