@@ -16,4 +16,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     line = session.query(State).get(1)
-    print("{}: {}".format(line.id, line.name))
+    if not line:
+        print("Nothing")
+    else:
+        print("{}: {}".format(line.id, line.name))
