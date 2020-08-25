@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""new module"""
 from urllib import request
 import sys
-"""new module"""
 
 
 if __name__ == "__main__":
