@@ -14,7 +14,7 @@ if __name__ == "__main__":
     try:
         reques = r.json()
         if "id" in reques and "name" in reques:
-            print("[{}] {}i".format(reques['id'], reques['name']))
+            print("[{}] {}".format(reques['id'], reques['name']))
         else:
             print("No result")
     except ValueError:
